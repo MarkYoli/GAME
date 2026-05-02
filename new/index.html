@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<!-- Mirrored from danilzxcqqq.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 May 2026 21:43:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Игровой портал</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="icon" href="favicon.html" type="image/x-icon">
+    <script src="../telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <!-- Улучшенный профиль пользователя -->
+  <div class="user-profile" id="userProfile">
+    <div class="profile-info">
+      <div class="main-profile-section">
+        <div class="avatar-container">
+          <img id="userAvatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70' viewBox='0 0 70 70'%3E%3Ccircle cx='35' cy='35' r='30' fill='%234A90E2'/%3E%3Ctext x='35' y='42' font-family='Arial' font-size='28' fill='white' text-anchor='middle'%3E👤%3C/text%3E%3C/svg%3E" alt="Avatar" class="user-avatar">
+          <div class="avatar-status"></div>
+        </div>
+        <div class="user-details">
+          <div class="user-name-section">
+            <h3 id="userName" class="user-name">Пользователь</h3>
+            <button class="settings-btn" id="settingsBtn" title="Настройки">
+              <span class="settings-icon">⚙️</span>
+            </button>
+          </div>
+          <p id="userId" class="user-id">ID: не загружен</p>
+          <div class="user-status">
+            <span class="status-indicator online"></span>
+            <span class="status-text">Online</span>
+          </div>
+        </div>
+      </div>
+      <div class="profile-controls">
+        <div class="quick-actions">
+          <button class="action-btn share-btn" id="shareBotBtn" title="Поделиться ботом">
+            <span class="action-icon">💬</span>
+            <span class="action-text">Share</span>
+          </button>
+        </div>
+        <div class="device-detector">
+          <div class="device-info-mini" id="deviceInfo">
+            <span class="device-icon">📱</span>
+            <span class="device-text" id="deviceText">Mobile</span>
+          </div>
+        </div>
+        <!-- Селектор тем будет добавлен автоматически через JavaScript -->
+      </div>
+      
+      <!-- Выдвижное меню настроек -->
+      <div class="settings-panel" id="settingsPanel">
+        <div class="settings-header">
+          <h4>Настройки темы</h4>
+        </div>
+        <div class="settings-content">
+          <!-- Темы будут добавлены через JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<div id="Games" class="tabcontent active">
+    <div class="row">
+        <div class="game">
+            <div class="game-badge">Hot</div>
+            <img src="1.png" alt="Mines Preview">
+            <div class="game-info">
+                <h3 id="game1-title">Mines</h3>
+                <button id="game1-button" onclick="openGame('mines')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-badge">Hot</div>
+            <img src="mimines.jpg" alt="Mines Preview">
+            <div class="game-info">
+                <h3 id="game1-title">Mines Spribe</h3>
+                <button id="game2-button" onclick="openGame('spribe')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-badge">Hot</div>
+            <img src="tower.jpg" alt="Mines Preview">
+            <div class="game-info">
+                <h3 id="game1-title">Tower Rush</h3>
+                <button id="game2-button" onclick="openGame('tower')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <img src="qu.png" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">Rocket Queen</h3>
+                <button id="game3-button" onclick="openGame('queen')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <img src="4.png" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">MineField</h3>
+                <button id="game3-button" onclick="openGame('bomBucks')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <img src="2.png" alt="Royal Mines Preview">
+            <div class="game-info">
+                <h3 id="game5-title">Royal Mines</h3>
+                <button id="game6-button" onclick="openGame('royalMines')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <img src="penafon.png" alt="Penalty Shoot Preview">
+            <div class="game-info">
+                <h3 id="game6-title">Penalty Shoot</h3>
+                <button id="game7-button" onclick="openGame('penalty')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <img src="footxiconca.png" alt="Football X Preview">
+            <div class="game-info">
+                <h3 id="game7-title">Football X</h3>
+                <button id="game9-button" onclick="openGame('footballX')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <img src="11.png" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game10-title">CoinFlip</h3>
+                <button id="game10-button" onclick="openGame('coin')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <img src="5.png" alt="Football X Preview">
+            <div class="game-info">
+                <h3 id="game11-title">LuckyJet</h3>
+                <button id="game11-button" onclick="openGame('lucky')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <img src="6.png" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">Aviator</h3>
+                <button id="game12-button" onclick="openGame('aviator')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <img src="minesnew.jpg" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">Mines</h3>
+                <button id="game13-button" onclick="openGame('minesnew')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-badge new">New</div>
+            <img src="chick.jpg" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">Chicky Run</h3>
+                <button id="game13-button" onclick="openGame('chick')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-badge new">New</div>
+            <img src="ball.jpg" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">Balloon</h3>
+                <button id="game13-button" onclick="openGame('ball')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-badge new">New</div>
+            <img src="balloon.avif" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">BA BALLOON</h3>
+                <button id="game13-button" onclick="openGame('ba')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-badge new">New</div>
+            <img src="mineisland.avif" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">Mine Island</h3>
+                <button id="game13-button" onclick="openGame('mineisland')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-badge new">New</div>
+            <img src="road.png" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">Chicken Road</h3>
+                <button id="game13-button" onclick="openGame('chickroad')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-badge new">New</div>
+            <img src="king.webp" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">King Thimbles</h3>
+                <button id="game13-button" onclick="openGame('timb')">Open</button>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-badge new">New</div>
+            <img src="avia.png" alt="CoinFlip Preview">
+            <div class="game-info">
+                <h3 id="game-title">Avia Masters</h3>
+                <button id="game13-button" onclick="openGame('avia')">Open</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<audio id="aboutAudio" src="gif.mp3"></audio>
+
+<script>
+// Функция для создания метеоров
+function createMeteor() {
+    const meteorShower = document.getElementById('meteorShower');
+    const meteor = document.createElement('div');
+    meteor.className = 'meteor';
+    
+    // Случайное начальное положение
+    const startX = Math.random() * window.innerWidth;
+    const startY = -100;
+    
+    // Случайный размер
+    const size = Math.random() * 2 + 1;
+    const length = Math.random() * 100 + 30;
+    
+    meteor.style.left = startX + 'px';
+    meteor.style.top = startY + 'px';
+    meteor.style.width = size + 'px';
+    meteor.style.height = length + 'px';
+    meteor.style.animationDuration = Math.random() * 3 + 2 + 's';
+    
+    meteorShower.appendChild(meteor);
+    
+    // Удаляем метеор после окончания анимации
+    setTimeout(() => {
+        meteor.remove();
+    }, 6000);
+}
+
+// Запускаем периодическое создание метеоров
+setInterval(createMeteor, 8000);
+
+// Создаем несколько метеоров в начале
+for (let i = 0; i < 2; i++) {
+    setTimeout(createMeteor, Math.random() * 3000);
+}
+</script>
+
+<script src="themes.js"></script>
+<script src="quick-actions.js"></script>
+<script src="scroll-fix.js"></script>
+<script src="script.js"></script>
+</body>
+
+<!-- Mirrored from danilzxcqqq.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 May 2026 21:43:46 GMT -->
+</html>
