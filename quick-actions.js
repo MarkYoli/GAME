@@ -159,7 +159,7 @@ class QuickActionsManager {
                 const tg = window.Telegram.WebApp;
                 
                 // Открываем выбор чатов для отправки
-                tg.openTelegramLink(`https://t.me/share/url?url=https://t.me/HackBotgame_bot&text=${encodeURIComponent(shareText)}`);
+                tg.openTelegramLink(`https://t.me/share/url?url=https://t.me/kratossignal_bot&text=${encodeURIComponent(shareText)}`);
                 
                 // Показываем уведомление
                 this.showNotification(`Sharing @${botUsername}... 📤`, "success");
