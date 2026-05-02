@@ -1,0 +1,124 @@
+<html lang="ru" style="--tg-viewport-height: 100vh; --tg-viewport-stable-height: 100vh;"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Tower Rush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="hidden" id="language" value="russian">
+
+    <div class="back-arrow" onclick="window.location.href=&#39;https://danilzxcqqq.vercel.app&#39;;"'" aria-label="Back">
+        <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+    </div>
+
+    <div class="tr-bg">
+        <img src="resource/skyline.svg" class="skyline" alt="sky">
+    </div>
+
+    <header class="tr-header">
+        <img src="resource/logo.png" alt="Tower Rush" class="tr-logo">
+    </header>
+
+    <main class="tr-main">
+        <div class="tips-banner" id="tips-banner"><span id="tips-text">Играйте сериями по 10, не меняя ставку.</span></div>
+
+        <section class="tower-scene">
+            <div class="crane-stage">
+                <img src="resource/mast.svg" class="mast" alt="mast">
+                <img src="resource/arm.svg" class="arm" alt="arm">
+                <div class="hook-anchor">
+                    <img src="resource/hook.svg" class="hook" alt="hook">
+                    <img src="resource/block.svg" class="block swing" alt="block">
+                </div>
+            </div>
+            <div class="tr-multiplier" id="multiplier">x1.00</div>
+        </section>
+
+        <div class="tr-stats" id="tr-stats">
+            <span id="stat-best-label">Лучший:</span> <b id="stat-best">x0.00</b>
+            <span class="sep">|</span>
+            <span id="stat-avg-label">Средний:</span> <b id="stat-avg">x0.00</b>
+            <span class="sep">|</span>
+            <span id="stat-count-label">Всего:</span> <b id="stat-count">0</b>
+        </div>
+
+        <button class="tr-signal-btn" id="signal-btn">
+            🏗️ <span id="get-signal-text">Получить сигнал</span>
+            <span class="ripple"></span>
+            <span class="ready-badge" id="ready-badge">Готово</span>
+        </button>
+        <div id="cooldown-timer" class="cooldown-timer" style="display:none">Следующий сигнал через 3с</div>
+
+        <section class="tr-history">
+            <div class="tr-history-title" id="history-title">История сигналов</div>
+            <ul class="tr-history-list" id="history-list"></ul>
+        </section>
+    </main>
+
+    <!-- Аналитика -->
+    <div class="modal-overlay" id="analysis-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="sync-title">СИНХРОНИЗАЦИЯ ДАННЫХ</h2>
+                <div class="stepper" id="stepper">
+                    <div class="step active" data-step="1"><span class="dot">1</span><span class="label" id="step-init">Инициализация</span></div>
+                    <div class="connector"></div>
+                    <div class="step" data-step="2"><span class="dot">2</span><span class="label" id="step-conn">Подключение</span></div>
+                    <div class="connector"></div>
+                    <div class="step" data-step="3"><span class="dot">3</span><span class="label" id="step-anal">Анализ</span></div>
+                    <div class="connector"></div>
+                    <div class="step" data-step="4"><span class="dot">4</span><span class="label" id="step-res">Результат</span></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="step-caption" id="step-caption"></div>
+                <div class="progressbar"><div class="bar" id="analysis-bar"></div></div>
+                <div class="analysis-log" id="analysis-log"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Результат -->
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="result-title">СТРОЙКА ПРОСЧИТАНА</h2>
+            </div>
+            <div class="modal-body">
+                <div class="result-content">
+                    <div class="result-header">
+                        <div class="result-dot"></div>
+                        <div class="result-titles">
+                            <div class="analysis-status" id="analysis-status">Анализ завершен</div>
+                        </div>
+                    </div>
+                    <div class="result-grid">
+                        <div class="stat-card">
+                            <div class="stat-label" id="res-label-blocks">Блоков</div>
+                            <div class="stat-value" id="res-blocks">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label" id="res-label-mult">Цель</div>
+                            <div class="stat-value accent" id="res-mult">x0.00</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label" id="res-label-prob">Вероятность</div>
+                            <div class="stat-value success" id="res-prob">0%</div>
+                        </div>
+                    </div>
+                    <div class="result-note" id="result-note"></div>
+                </div>
+                <button class="modal-btn close-btn" id="close-result">ЗАКРЫТЬ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tr-notification" id="tr-notification"></div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+</body></html>
